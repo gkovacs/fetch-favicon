@@ -16,7 +16,11 @@ function getFavicons (url) {
   }])
 }
 
-export { fetchFavicon as default }
+function setFetchFaviconTimeout (ms) {
+  return x.timeout(ms)
+}
+
+export { fetchFavicon as default, setFetchFaviconTimeout }
 
 export
 function fetchFavicon (url, size) {
